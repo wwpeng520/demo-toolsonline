@@ -1,0 +1,1 @@
+$(function(){var b,a;$("#textArea").hover(function(){return $(this).select()});$("#xmorseArea").hover(function(){return $(this).select()});$("#xmorseEncode").click(function(){b=$("#textArea").val();a=xmorse.encode(b);$("#xmorseArea").val(a)});$("#xmorseDocode").click(function(){b=$("#xmorseArea").val();a=xmorse.decode(b);$("#textArea").val(a)})});

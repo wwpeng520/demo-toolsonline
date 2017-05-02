@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="tools,front-end">
+    <meta name="description" content="我的个人练习项目，在线工具">
+    <meta name="author" content="汪文鹏,wwpeng520@gmail.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/img/Tools.ico">
+    <title>在线字符统计工具</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/wordcounter.css">
+</head>
+<body>
+    <%- include('./_header.html'); %>
+    <div class="container" id="headContainer">
+        <div class="page-header">
+            <h6>在线字符统计工具</h6>
+        </div>
+    </div>
+
+    <div class="container" id="counterContent">
+        <textarea id="wordsTxtAra">在这里输入或粘贴文字...</textarea>
+        <div id="result">
+            <p><i id="numWord">0</i> Words, <i id="numEnChars">0</i> Characters, <i id="numZh">0</i> 个中文, <i id="numZhChars">0</i> 个中文标点符号</p>
+        </div>
+        <button type="button" class="btn btn-inverse" id="countWordsBtn">英文单词统计</button>
+        <div >
+            <table id="wordFreqTable">
+                <tr>
+                    <th>Word</th>
+                    <th>Frequency</th>
+                </tr>
+            </table>
+        </div>
+        <div class="instruction">
+            <h6>文本单词统计工具 | Word Counter</h6>
+            <p>1、Wordcounter是一个字计数和字符计数工具。你只需在输入框中输入或粘贴文本。</p>
+            <p>2、目前只支持中英文及标点。</p>
+            <p>3、频率统计功能只支持英文单词，并按频率从高到低排序，需要统计中文词语频率可以移步“Cutwords和词频统计页面”。</p>
+        </div>
+    </div>
+
+    <%- include('./_footer.html'); %>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+<script src="/js/wordcounter.js"></script> 
+</body>
+</html>

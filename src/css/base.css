@@ -1,0 +1,17 @@
+*{padding:0;margin:0;}
+body {
+    position: relative;
+    background-color: #F8F8F8;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #34495E;
+    color: #ddd;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="tools,front-end">
+    <meta name="description" content="我的个人练习项目，在线工具">
+    <meta name="author" content="汪文鹏,wwpeng520@gmail.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/img/Tools.ico">
+    <title>中文|Unicode|UTF-8相互转换,URL编码/解码</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/chinese2code.css">
+</head>
+<body>
+
+    <%- include('./_header.html'); %>
+    <div class="container" id="headContainer">
+        <div class="page-header">
+            <h6>中文 Unicode UTF-8相互转换，URL编码/解码</h6>
+        </div>
+    </div>
+
+    <div class="container" id="bodyContainer">
+        <div class="row">
+            <div class="col-sm-5 col-md-5 col-lg-5">
+                <p>输入框</p>
+                <textarea name="utf8-area" class="utf-class" id="enterArea">点击转换按钮之前请输入相应格式的字符</textarea>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1 col-md-5 col-lg-5">
+                <p>转换结果</p>
+                <textarea name="utf16-area" class="utf-class" id="outArea">在此输出结果</textarea>
+            </div>
+            <div class="btn-group">
+                <ul class="" id="utfBtn">
+                    <li><button type="button" class="btn btn-inverse" id="chinese2Utf8">中文转UTF-8</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="chinese2Unicode">中文转Unicode</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="ascii2Unicode">ASCII转Unicode</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="unicode2ascii">Unicode转ASCII</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="unicode2Chinese">Unicode转中文</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="urlEncode">url编码</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="urlDocode">url解码</button></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./_footer.html'); %>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+<script src="/js/chinese2code.js"></script>
+</body>
+</html>

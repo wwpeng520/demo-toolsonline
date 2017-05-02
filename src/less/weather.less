@@ -1,0 +1,127 @@
+#body{
+    padding-top: 80px;
+    padding-bottom: 30px;
+    min-width: 950px;
+}
+.input-group{
+    margin-bottom: 5px;
+}
+#weatherData{
+    list-style: none;
+    display: flex;
+    li{
+        border: 1px solid #D8E5F7;
+        width: 25%;
+        text-align: center;
+        flex: none;
+        &:hover{
+            border: 3px solid #6189C6;
+            cursor: pointer;
+        }
+        p{
+            font-size: 16px;
+            line-height: 16px;
+        }
+        .wea-img{
+            margin: 10px auto;
+        }
+        .wea-item-header{
+            width: 100%;
+            background-color: #6C9CE4;
+            color: white;
+            height: 30px;
+            p{
+                font-size: 18px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+#weatherIndexAreaHeader{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    background-color: #6C9CE4;
+    border-radius: 5px;
+    color: white;
+    padding: 15px auto;
+}
+#weatherIndex{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    li{
+        width: 300px;
+        height: 150px;
+        overflow: hidden;
+        margin-top: 3px;
+        margin-left: 2px;
+        flex: 1 0 auto;
+        background-color: #daedff;
+        position: relative;
+        i{
+            display: block;
+            height: 46px;
+            width: 46px;
+            background-image: url(http://i.tq121.com.cn/i/weather2015/city/iconalls.png);
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            position: absolute;
+            top: 25px;
+            left: 22px;
+        }
+        .zs{
+            color: #187db6;
+            display: block;
+            font-size: 24px;
+            line-height: 30px;
+            position: absolute;
+            top: 5px;
+            left: 90px;
+            width: 100px;
+            height: 24px;
+        }
+        .title{
+            color: #1570a6;
+            display: block;
+            position: absolute;
+            top: 80px;
+            left: 5px;
+            width: 80px;
+            font-size: 15px;
+            line-height: 30px;
+            font-style: normal;
+            text-align: center;
+        }
+        .des{
+            color: #818181;
+            font-size: 14px;
+            left: 90px;
+            line-height: 24px;
+            position: absolute;
+            text-align: left;
+            top: 54px;
+            width: 190px;
+        }
+        &:nth-child(1) i{
+            background-position: -56px -352px;
+        }
+        &:nth-child(2) i{
+            background-position: -54px -402px;
+        }
+        &:nth-child(3) i{
+            background-position: -105px -352px;
+        }
+        &:nth-child(4) i{
+            background-position: -108px -402px;
+        }
+        &:nth-child(5) i{
+            background-position: -2px -401px;
+        }
+        &:nth-child(6) i{
+            background-position: -108px -172px;
+        }
+    }
+}

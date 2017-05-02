@@ -1,0 +1,37 @@
+ul{
+    list-style: none;
+    text-align: center;
+}
+li{
+    display: inline-block;
+}
+#headContainer{
+    margin-top: 20px;
+}
+#bodyContainer{
+    position: relative;
+    padding: 0 30px 50px 30px;
+}
+/*[class*=col-]{*/
+    /*height: 400px;*/
+    /*margin-right: 30px ;*/
+/*}*/
+.col-sm-5{
+    height: 400px;
+}
+.textarea-class{
+    border: 1px solid #ccc;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    font-size: 14px;
+}
+.col-sm-2{
+    margin-top: 40px;
+}
+.col-sm-2 .btn{
+    margin: 10px 0;
+    width: 100px;
+    padding: 10px 0;
+}

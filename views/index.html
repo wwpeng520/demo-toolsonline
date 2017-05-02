@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="tools,front-end">
+    <meta name="description" content="我的个人练习项目，在线工具">
+    <meta name="author" content="汪文鹏,wwpeng520@gmail.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/img/Tools.ico">
+    <title>在线工具</title>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>-->
+    <!--<script src="/js/jquery-3.1.1.min.js"></script>-->
+    <!--<link rel="stylesheet" href="/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+    <!--<link rel="stylesheet" href="/css/flat-ui.min.css">-->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+
+    <%- include('./_header.html'); %>
+
+    <div class="container" id="sitemapHeader">
+        <div class="page-header">
+            <h6>站点地图|Sitemap</h6>
+        </div>
+    </div>
+
+    <div class="container" id="contentArea">
+        <div class="container" id="developerTools">
+            <h6>开发者工具</h6>
+            <ul class="remove-text-nodes">
+                <li><a class="myitem" title="各类进制数值的相互转换" href="hexconvert">进制转换</a></li>
+                <li><a class="myitem" title="在线字符统计工具，英文单词频率统计" href="wordcounter">字符统计</a></li>
+                <li><a class="myitem" title="中文分词和词频统计" href="cutwords">中文分词和词频统计</a></li>
+                <li><a class="myitem" title="MD5加密，SHA1，AES等加密方式相互转换" href="encrypt">加密/解密工具</a></li>
+                <li><a class="myitem" title="中文|Unicode|UTF-8相互转换，URL编码、解码" href="chinese2code">中英文编码/解码</a></li>
+                <li><a class="myitem" title="摩斯密码相互转换，可用于汉字，字符，特殊符号等" href="xmorse">摩斯密码</a></li>
+                <li><a class="myitem" title="HTML转义和反转义" href="html-escape">HTML转义字符</a></li>
+                <li><a class="myitem" title="HTML/CSS/JS格式化" href="beautify">HTML/CSS/JS格式化</a></li>
+                <li><a class="myitem" title="计算文件Hash值" href="file-hash">计算文件Hash值</a></li>
+             </ul>
+        </div>
+        <div class="container" id="mediaTools">
+            <h6>多媒体工具</h6>
+            <ul class="remove-text-nodes">
+                <li><a class="myitem" title="天气查询" href="weather">天气查询</a></li>
+                <li><a class="myitem" title="" href="ip-inquire">IP查询</a></li>
+                <!--<li><a class="myitem" title="" href="">工具3</a></li>-->
+                <!--<li><a class="myitem" title="" href="">工具4</a></li>-->
+                <!--<li><a class="myitem" title="" href="">工具5</a></li>-->
+                <!--<li><a class="myitem" title="" href="">工具6</a></li>-->
+                <!--<li><a class="myitem" title="" href="">工具7</a></li>-->
+            </ul>
+        </div>
+
+    </div>
+    <div class="container" id="userinfo"></div>
+
+    <%- include('./_footer.html'); %>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+<!--<script src="/js/flat-ui.min.js"></script>-->
+<script src="/js/index.js"></script>
+</body>
+</html>

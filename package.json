@@ -1,0 +1,48 @@
+{
+  "name": "tools-online",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "co": "^4.6.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "~2.5.5",
+    "express": "~4.14.1",
+    "less": "^2.7.2",
+    "lodash": "^4.17.4",
+    "morgan": "~1.7.0",
+    "mysql": "^2.13.0",
+    "node-ipcity": "^0.1.1",
+    "nodejieba": "^2.2.4",
+    "request-ip": "^2.0.1",
+    "sequelize": "^3.30.4",
+    "serve-favicon": "~2.3.2",
+    "useragent": "^2.1.13"
+  },
+  "devDependencies": {
+    "browserify": "^14.3.0",
+    "css-loader": "^0.28.0",
+    "eslint": "^3.19.0",
+    "eslint-config-enough": "^0.2.6",
+    "eslint-loader": "^1.7.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "jquery": "^3.2.1",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.2",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "uglify-js": "^2.8.22",
+    "uglifyjs-webpack-plugin": "^0.4.3",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}

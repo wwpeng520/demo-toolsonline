@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="tools,front-end">
+    <meta name="description" content="我的个人练习项目，在线工具">
+    <meta name="author" content="汪文鹏,wwpeng520@gmail.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/img/Tools.ico">
+    <title>常用加密、解密工具</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/encrypt.css">
+</head>
+<body>
+    <%- include('./_header.html'); %>
+    <div class="container" id="encryptHeader">
+        <div class="page-header">
+            <h6>在线加密解密<small>  采用Crypto-JS实现</small></h6>
+            <ul id="encryptTypes">
+                <li class="clicked">散列/哈希</li>
+                <li>BASE64</li>
+                <li>加密/解密</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" id="encryptContent">
+        <div id="enterArea">
+            <p></p><img src="/img/right.png"  class="imgRight"><span>输入要加密的字符串：</span></p>
+            <textarea name="encrypt-enter" id="encryptEnter">this is an example</textarea>
+        </div>
+
+        <div id="btnArea">
+            <div class="btn-group type0" role="group" id="btnArea0a">
+                <ul>
+                    <li><button type="button" class="btn btn-inverse" id="md5Btn">MD5</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="sha1Btn">SHA1</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="sha224Btn">SHA224</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="sha256Btn">SHA256</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="sha384Btn">SHA384</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="sha512Btn">SHA512</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="ripemd160Btn">RIPEMD160</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="pbkdf2Btn">PBKDF2</button></li>
+                    <li  class="dropdown" id="sha3Dropdown">
+                        <button class="btn btn-inverse dropdown-toggle" type="button" data-toggle="dropdown">SHA3<span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-inverse my-dropdown" role="menu">
+                            <li><a href="#" id="sha3224Btn">SHA3-224</a></li>
+                            <li><a href="#" id="sha3256Btn">SHA3-256</a></li>
+                            <li><a href="#" id="sha3384Btn">SHA3-384</a></li>
+                            <li><a href="#" id="sha3512Btn">SHA3-512</a></li>
+                        </ul>
+                    </li>
+            </ul>
+            </div>
+
+            <div class="btn-group type0" role="group" id="btnArea0b">
+                <ul>
+                    <li><button type="button" class="btn btn-inverse" id="hmacMd5Btn">Hmac-MD5</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="hmacSha1Btn">Hmac-SHA1</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="hmacSha224Btn">Hmac-SHA224</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="hmacSha256Btn">Hmac-SHA256</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="hmacSha384Btn">Hmac-SHA384</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="hmacSha512Btn">Hmac-SHA512</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="hmacSha3Btn">Hmac-SHA3</button></li>
+                    <li><button type="button" class="btn btn-inverse" id="hmacRipemd160Btn">Hmac-RIPEMD160</button></li>
+                </ul>
+            </div>
+
+            <!--点击Hmac类型显示的密钥框-->
+            <div id="passwordArea">
+                <div  class="btn-group" role="group" id="pwdGroup">
+                    <span>密钥</span>
+                    <input type="text" name="password-enter" id="passwordEnter" value="在此输入密钥">
+                </div>
+                <button type="button" class="btn btn-inverse" id="hmacBtn"></button>
+            </div>
+
+            <div class="type1" id="btnArea1">
+                <button type="button" class="btn btn-inverse" id="b64encodeBtn">BASE64编码</button>
+                <button type="button" class="btn btn-inverse" id="b64decodeBtn">BASE64解码</button>
+            </div>
+
+            <div class="type3" id="btnArea3">
+                <p>选择加密方式：</p>
+                <input type="radio" name="ADRQ" class="btn btn-inverse" id="aesBtn" checked><span>AES</span>
+                <input type="radio" name="ADRQ" class="btn btn-inverse" id="desBtn"><span>DES</span>
+                <input type="radio" name="ADRQ" class="btn btn-inverse" id="rc4Btn"><span>RC4</span>
+                <input type="radio" name="ADRQ" class="btn btn-inverse" id="rabbitBtn"><span>Rabbit</span>
+                <input type="radio" name="ADRQ" class="btn btn-inverse" id="tripledesBtn"><span>TripleDes</span>
+                <button type="button" class="btn btn-inverse" id="ADRQencodeBtn">加密</button>
+                <button type="button" class="btn btn-inverse" id="ADRQdecodeBtn">解密</button>
+            </div>
+        </div>
+        <hr>
+        <div id="outArea">
+            <p><img src="/img/right.png" class="imgRight">转换结果：</p>
+            <textarea name="encrypt-out" id="encryptOut"></textarea>
+        </div>
+
+    </div>
+    <%- include('./_footer.html'); %>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+<script src="/js/encrypt.js"></script>
+<script src="/js/cryptojs/rollups/md5.js"></script>
+<script src="/js/cryptojs/rollups/sha1.js"></script>
+<script src="/js/cryptojs/rollups/sha3.js"></script>
+<script src="/js/cryptojs/rollups/sha224.js"></script>
+<script src="/js/cryptojs/rollups/sha256.js"></script>
+<script src="/js/cryptojs/rollups/sha384.js"></script>
+<script src="/js/cryptojs/rollups/sha512.js"></script>
+<script src="/js/cryptojs/rollups/hmac-sha1.js"></script>
+<script src="/js/cryptojs/rollups/hmac-sha3.js"></script>
+<script src="/js/cryptojs/rollups/hmac-sha224.js"></script>
+<script src="/js/cryptojs/rollups/hmac-sha256.js"></script>
+<script src="/js/cryptojs/rollups/hmac-sha384.js"></script>
+<script src="/js/cryptojs/rollups/hmac-sha512.js"></script>
+<script src="/js/cryptojs/rollups/pbkdf2.js"></script>
+<script src="/js/cryptojs/rollups/ripemd160.js"></script>
+<script src="/js/cryptojs/rollups/hmac-ripemd160.js"></script>
+<script src="/js/cryptojs/rollups/aes.js"></script>
+<script src="/js/cryptojs/rollups/tripledes.js"></script>
+<script src="/js/cryptojs/rollups/rc4.js"></script>
+<script src="/js/cryptojs/rollups/rabbit.js"></script>
+</body>
+</html>

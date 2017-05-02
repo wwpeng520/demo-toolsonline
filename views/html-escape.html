@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="tools,front-end">
+    <meta name="description" content="我的个人练习项目，在线工具">
+    <meta name="author" content="汪文鹏,wwpeng520@gmail.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/img/Tools.ico">
+    <title>HTML转义</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/html-escape.css">
+</head>
+<body>
+    <%- include('./_header.html'); %>
+
+    <div class="container" id="htmlEscapeHeader">
+        <div class="page-header">
+            <h6>HTML转义字符</h6>
+        </div>
+    </div>
+
+    <div class="container" id="escapeContent">
+        <div>
+            <p><img src="/img/right.png"  class="imgRight">输入要转换的HTML代码：</p>
+            <textarea name="htmlArea" id="htmlArea">
+&lt;p&gt;在输入框内粘贴你需要转换的HTML代码&lt;/p&gt;
+&lt;p&gt;HTML转义，可以将HTML代码转换为HTML转义字符串&lt;/p&gt;</textarea>
+            <button type="button" class="btn btn-inverse" id="escape">HTML转义(escape)</button>
+            <button type="button" class="btn btn-inverse" id="unescape">HTML反转义(unescape)</button>
+        </div>
+        <div id="textareaOut">
+            <p><img src="/img/right.png"  class="imgRight">转换结果：</p>
+            <textarea name="htmlEscapeArea" id="htmlEscapeArea"></textarea>
+        </div>
+
+    </div>
+    <%- include('./_footer.html'); %>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+<script src="/js/html-escape.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="tools,front-end">
+    <meta name="description" content="我的个人练习项目，在线工具">
+    <meta name="author" content="汪文鹏,wwpeng520@gmail.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/img/Tools.ico">
+    <title>天气预报</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/weather.css">
+</head>
+<body>
+    <%- include('./_header.html'); %>
+    
+    <div class="container" id="body">
+        <div class="input-group">
+            <input type="text" class="form-control" id="cityEnter" placeholder="输入您要查询的城市，如：北京市">
+            <span class="input-group-btn">
+                <button class="btn btn-default" id="getWeatherData" type="button">Go!</button>
+            </span>
+        </div>
+
+        <p><span id="changeWord">您所在城市：</span><span id="currentCity"></span>;&nbsp;<span id="updateAt"></span></p>
+        <div>
+            <ul id="weaArea">
+                <li id="weaNow">
+                    <div class="wea-for-header">
+                        <p>实时天气情况</p>
+                    </div>
+                    <div>
+                        <img title="天气图标">
+                        <p id="weaNowTxt"></p>
+                    </div>
+                    <div>
+                        <p id="weaNowTmp"></p>
+                        <p id="weaNowHum"></p>
+                        <p id="weaNowVis"></p>
+                        <p id="weaNowWindSc"></p>
+                    </div>
+                </li>
+                <li class="wea-for">
+                    <div class="wea-for-header">
+                        <p class="wea-for-date"></p>
+                    </div>
+                    <div class="wea-for-img">
+                        <img class="wea-for-day-img" title="day">
+                        <img class="wea-for-night-img" title="night">
+                    </div>
+                    <div>
+                        <p><span class="wea-for-txt-d"></span>&nbsp;/&nbsp;<span class="wea-for-txt-n"></span></p>
+                        <p class="wea-for-tmp"></p>
+                        <p class="wea-for-hum"></p>
+                        <p class="wea-for-vis"></p>
+                        <p class="wea-for-wind-sc"></p>
+                    </div>
+                </li>
+                <li class="wea-for">
+                    <div class="wea-for-header">
+                        <p class="wea-for-date"></p>
+                    </div>
+                    <div class="wea-for-img">
+                        <img class="wea-for-day-img" title="day">
+                        <img class="wea-for-night-img" title="night">
+                    </div>
+                    <div>
+                        <p><span class="wea-for-txt-d"></span>&nbsp;/&nbsp;<span class="wea-for-txt-n"></span></p>
+                        <p class="wea-for-tmp"></p>
+                        <p class="wea-for-hum"></p>
+                        <p class="wea-for-vis"></p>
+                        <p class="wea-for-wind-sc"></p>
+                    </div>
+                </li>
+                <li class="wea-for">
+                    <div class="wea-for-header">
+                        <p class="wea-for-date"></p>
+                    </div>
+                    <div class="wea-for-img">
+                        <img class="wea-for-day-img" title="day">
+                        <img class="wea-for-night-img" title="night">
+                    </div>
+                    <div>
+                        <p><span class="wea-for-txt-d"></span>&nbsp;/&nbsp;<span class="wea-for-txt-n"></span></p>
+                        <p class="wea-for-tmp"></p>
+                        <p class="wea-for-hum"></p>
+                        <p class="wea-for-vis"></p>
+                        <p class="wea-for-wind-sc"></p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+        <!--<hr>-->
+        <div id="livSugArea">
+            <div id="livSugHeader">
+                <p>今日生活指数</p>
+            </div>
+            <div>
+                <ul id="livSug">
+                    <li>
+                        <i></i>
+                        <h6 class="brf"></h6>
+                        <p class="title"></p>
+                        <p class="txt"></p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <h6 class="brf"></h6>
+                        <p class="title"></p>
+                        <p class="txt"></p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <h6 class="brf"></h6>
+                        <p class="title"></p>
+                        <p class="txt"></p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <h6 class="brf"></h6>
+                        <p class="title"></p>
+                        <p class="txt"></p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <h6 class="brf"></h6>
+                        <p class="title"></p>
+                        <p class="txt"></p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <h6 class="brf"></h6>
+                        <p class="title"></p>
+                        <p class="txt"></p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <h6 class="brf"></h6>
+                        <p class="title"></p>
+                        <p class="txt"></p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <h6 class="brf"></h6>
+                        <p class="title"></p>
+                        <p class="txt"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./_footer.html'); %>
+<script src="/js/cryptojs/rollups/hmac-sha1.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+<script src="/js/weather.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+#headContainer{
+    margin-top: 10px;
+}
+#hisDisplay{
+  margin-bottom: 50px;
+}
+#hisDisplay table {
+  /*height: 400px;*/
+  width: 100%;
+}
+#hisDisplay th,
+#hisDisplay td {
+  border: 1px solid #CED2C9;
+  padding: 3px 5px;
+  color: #336699;
+  background-color: #E8FBD6;
+}
+#hisDisplay th:nth-child(1),#hisDisplay th:nth-child(2),
+#hisDisplay td:nth-child(1),#hisDisplay td:nth-child(2){
+  text-align: center;
+}
