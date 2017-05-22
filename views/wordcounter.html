@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="/img/Tools.ico">
     <title>在线字符统计工具</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">-->
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/wordcounter.css">
 </head>
@@ -17,7 +17,7 @@
     <%- include('./_header.html'); %>
     <div class="container" id="headContainer">
         <div class="page-header">
-            <h6>在线字符统计工具</h6>
+            <h3>在线字符统计工具</h3>
         </div>
     </div>
 
@@ -36,7 +36,7 @@
             </table>
         </div>
         <div class="instruction">
-            <h6>文本单词统计工具 | Word Counter</h6>
+            <h5>文本单词统计工具 | Word Counter</h5>
             <p>1、Wordcounter是一个字计数和字符计数工具。你只需在输入框中输入或粘贴文本。</p>
             <p>2、目前只支持中英文及标点。</p>
             <p>3、频率统计功能只支持英文单词，并按频率从高到低排序，需要统计中文词语频率可以移步“Cutwords和词频统计页面”。</p>
@@ -45,7 +45,10 @@
 
     <%- include('./_footer.html'); %>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>-->
+<script src="/js/iconfont.js"></script>
+<script src="/js/base.js"></script>
 <script src="/js/wordcounter.js"></script> 
 </body>
 </html>

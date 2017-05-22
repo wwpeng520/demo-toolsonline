@@ -4,6 +4,5 @@ node_modules/
 *.log
 #忽略demo文件夹下的文件（不包括文件夹）
 demo/
-.vscode
-
-
+.vscode/
+.project

@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="/img/Tools.ico">
     <title>Xmorse 摩斯密码</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">-->
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/myxmorse.css">
 </head>
@@ -18,24 +18,49 @@
 
     <div class="container" id="headContainer">
         <div class="page-header">
-            <h6>摩斯密码</h6>
+            <h3>摩斯密码</h3>
         </div>
     </div>
 
     <div class="container" id="bodyContainer">
-        <div class="row">
-            <div class="col-sm-5 col-md-5 col-lg-5">
-                <p>字符</p>
+        <div>
+            <div class="chars">
+                <p>
+                	<svg class="icon" aria-hidden="true">
+					  	<use xlink:href="#icon-iconfontyoujiantou"></use>
+					</svg>
+					字符
+                </p>
                 <textarea class="textarea-class" id="textArea">在此区域输入要编码的字符</textarea>
             </div>
-            <div class="col-sm-2 col-md-2 col-lg-2">
+            <div class="btn-area">
                 <ul>
-                    <li><button type="button" class="btn btn-inverse" id="xmorseEncode">xmorse编码&nbsp;&gt;</button></li>
-                    <li><button type="button" class="btn btn-inverse" id="xmorseDocode">&lt;&nbsp;xmorse解码</button></li>
+                    <li>
+                    	<button type="button" class="btn btn-inverse" id="xmorseEncode">
+	                    	xmorse编码
+	                    	<span class="sm-hidden"> &gt;</span>
+	                    	<svg class="icon  sm-show" aria-hidden="true">
+							  	<use xlink:href="#icon-xiangshangjiantou"></use>
+							</svg>
+	                    </button>
+                    </li>
+                    <li>
+                    	<button type="button" class="btn btn-inverse" id="xmorseDocode">
+	                    	<span class="sm-hidden">&lt; </span>xmorse解码
+	                    	<svg class="icon sm-show" aria-hidden="true">
+							  	<use xlink:href="#icon-xiangxiajiantou"></use>
+							</svg>
+	                    </button>
+                    </li>
                 </ul>
             </div>
-            <div class="col-sm-5 col-md-5 col-lg-5">
-                <p>xmorse密码</p>
+            <div class="codes">
+                <p>
+                	<svg class="icon" aria-hidden="true">
+					  	<use xlink:href="#icon-iconfontyoujiantou"></use>
+					</svg>
+					xmorse密码
+                </p>
                 <textarea class="textarea-class" id="xmorseArea">xmorse密码区</textarea>
             </div>
 
@@ -43,8 +68,11 @@
     </div>
     <%- include('./_footer.html'); %>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>-->
+<script src="/js/iconfont.js"></script>
 <script src="/js/xmorse.min.js"></script>
+<script src="/js/base.js"></script>
 <script src="/js/myxmorse.js"></script>
 </body>
 </html>

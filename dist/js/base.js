@@ -1,0 +1,1 @@
+$(function(){$("ul.nav > li").hover(function(){$(this).find("ul").stop().slideDown(800)},function(){$(this).find("ul").stop().slideUp(500)})});

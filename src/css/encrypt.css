@@ -54,9 +54,6 @@ p {
   margin-top: 5px;
   clear: both;
 }
-.imgRight {
-  width: 25px;
-}
 #btnArea ul {
   list-style: none;
 }
@@ -72,14 +69,15 @@ p {
   display: none;
   margin-bottom: 20px;
 }
-#encryptContent .btn {
+#btnArea .btn {
   /*改变按钮显示效果*/
   margin-bottom: 10px;
   padding: 8px;
+  border: 1px solid #999;
 }
 #hmacBtn {
   position: absolute;
-  top: 10px;
+  top: 5px;
   padding: 5px 8px;
   margin-left: 10px;
 }
@@ -112,4 +110,55 @@ p {
 }
 #outArea {
   margin-top: -40px;
+}
+@media only screen and (max-width: 767px) {
+	#encryptHeader{
+		margin-left: 2%;
+	}
+	#encryptHeader h3 {
+	  font-size: 16px;
+	}
+	#encryptTypes li {
+		font-size: 14px;
+	}
+	#encryptTypes li.clicked {
+	  font-size: 15px;
+	}
+	#btnArea .btn {
+	  margin: 0;
+	  padding: 5px 3px;
+	  font-size: 12px;
+	}
+	#btnArea ul{
+		margin: 1px;
+	}
+	#btnArea ul li{
+		padding:  0;
+		overflow: hidden;
+	}
+	#passwordArea{
+		padding: 0;
+		/*overflow: hidden;*/
+	}
+	#passwordArea span {
+	  line-height: 30px;
+	  font-size: 12px;
+	  margin-left: 0;
+	}
+	#passwordEnter{
+		width: 50%;
+		height: 30px;
+		margin-top: 3px;
+		font-size: 13px;
+	}
+	#hmacBtn {
+	  top: 2px;
+	  padding: 1px;
+	  margin: 0 0 0 -80px;
+	  height: 30px;
+	  font-size: 12px;
+	}
+	p{
+		font-size: 13px;
+	}
 }

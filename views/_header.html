@@ -1,22 +1,72 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">在线工具</a>
+            <h2><a href="/">在线工具</a></h2>
             <h6 class="navbar-text hidden-sm hidden-xs">Do some practice.</h6>
+        	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <!--<span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>-->
+                <svg class="icon" aria-hidden="true">
+				  	<use xlink:href="#icon-sanheng"></use>
+				</svg>
+            </button>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/">多媒体工具</a></li>
-                <li><a href="/">生活类工具</a></li>
-                <li><a href="/">开发者工具</a></li>
-                <li><a href="/">站长工具</a></li>
+            	<li class="active">
+                	<a href="/">
+                		<svg class="icon" aria-hidden="true">
+						  	<use xlink:href="#icon-zhuye"></use>
+						</svg>
+	                	主页
+	                </a>
+	            </li>
+                <li>
+                	<!--<a href="/">-->
+	                <div>
+	                	<svg class="icon" aria-hidden="true">
+						  	<use xlink:href="#icon-kaifazhegongju"></use>
+						</svg>
+	                	开发者工具
+	                	<span class="caret"></span>
+	                </div>
+	                <!--</a>-->
+                    <ul>
+                        <li><a href="hexconvert" title="进制转换">进制转换</a></li>
+                        <li><a href="wordcounter" title="字符统计">字符统计</a></li>
+                        <li><a href="cutwords" title="中文分词和词频统计">中文分词和词频统计</a></li>
+                        <li><a href="encrypt" title="加密/解密工具">加密/解密工具</a></li>
+                        <li><a href="chinese2code" title="中英文编码/解码">中英文编码/解码</a></li>
+                        <li><a href="xmorse" title="摩斯密码">摩斯密码</a></li>
+                        <li><a href="html-escape" title="HTML转义字符">HTML转义字符</a></li>
+                        <li><a href="beautify" title="HTML/CSS/JS格式化">HTML/CSS/JS格式化</a></li>
+                        <li><a href="file-hash" title="计算文件Hash值">计算文件Hash值</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<div>
+	                	<svg class="icon" aria-hidden="true">
+						  	<use xlink:href="#icon-tubiao2duomeiti"></use>
+						</svg>
+	                	多媒体工具
+	                	<span class="caret"></span>
+	                </div>
+                    <ul>
+                        <li><a href="weather" title="天气查询">天气查询</a></li>
+                        <li><a href="ip-inquire" title="IP查询">IP查询</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<div>
+                		<svg class="icon" aria-hidden="true">
+						  	<use xlink:href="#icon-shenghuo"></use>
+						</svg>
+	                	生活类工具
+	                </div>
+	            </li>
             </ul>
         </div>
     </div>

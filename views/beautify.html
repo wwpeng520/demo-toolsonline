@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="/img/Tools.ico">
     <title>HTML/CSS/JS格式化</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">-->
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/mybeautify.css">
 </head>
@@ -17,14 +17,19 @@
     <%- include('./_header.html'); %>
     <div class="container" id="headContainer">
         <div class="page-header">
-            <h6>HTML/CSS/JS格式化</h6>
+            <h3>HTML/CSS/JS格式化</h3>
         </div>
     </div>
 
     <div class="container" id="bodyContainer">
         <div class="row">
             <div class="col-sm-5 col-md-5 col-lg-5">
-                <p>输入</p>
+                <p>
+                	<svg class="icon" aria-hidden="true">
+					  	<use xlink:href="#icon-iconfontyoujiantou"></use>
+					</svg>
+					输入
+                </p>
                 <textarea class="textarea-class" id="enterArea">在此区域输入要格式化的代码</textarea>
             </div>
             <ul class="col-sm-2 col-md-2 col-lg-2">
@@ -33,7 +38,12 @@
                 <li><button type="button" class="btn btn-inverse" id="jsBeautify">JS格式化</button></li>
             </ul>
             <div class="col-sm-5 col-md-5 col-lg-5">
-                <p>格式化结果</p>
+                <p>
+                	<svg class="icon" aria-hidden="true">
+					  	<use xlink:href="#icon-iconfontyoujiantou"></use>
+					</svg>
+					格式化结果
+                </p>
                 <textarea class="textarea-class" id="outArea"></textarea>
             </div>
 
@@ -42,8 +52,11 @@
 
     <%- include('./_footer.html'); %>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="/js/iconfont.js"></script>
+<script src="/js/base.js"></script>
 <script src="/js/mybeautify.js"></script>
 </body>
 </html>

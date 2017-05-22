@@ -22,7 +22,6 @@ li{
     position: absolute;
     left: 0;
     font-size: 14px;
-
 }
 #bodyContainer p{
     font-size: 16px;
@@ -31,4 +30,27 @@ li{
 button{
     margin: 15px 1px;
 }
-
+@media only screen and (max-width: 767px) {
+	#headContainer {
+		margin-left: 2%;
+	}
+	#headContainer h3 {
+		font-size: 16px;
+	}
+	[class*=col-]{
+	    height: 28vh;
+	    margin-right: 30px ;
+	}
+	#bodyContainer p{
+	    font-size: 13px;
+	}
+	.utf-class{
+	    height: 24vh;
+	    font-size: 12px;
+	}
+	#utfBtn .btn {
+		font-size: 12px;
+		padding: 2px;
+		margin: 10px 2px 2px 2px;
+	}
+}

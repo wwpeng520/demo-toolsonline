@@ -10,23 +10,73 @@ li{
 }
 #bodyContainer{
     position: relative;
-    padding: 0 30px 50px 30px;
+    /*padding: 0 30px 50px 30px;*/
 }
-.col-sm-5{
-    height: 400px;
+.chars{
+	width: 42%;
+	height: 400px;
+	float: left;
 }
-.textarea-class{
-    border: 1px solid #ccc;
-    height: 350px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    font-size: 14px;
+.btn-area{
+	width: 16%;
+	height: 400px;
+	float: left;
+	padding-top: 30px;
 }
-.col-sm-2{
-    margin-top: 40px;
+#textArea,
+#xmorseArea {
+	width: 100%;
+	height: 370px;
 }
-.col-sm-2 .btn{
-    margin: 10px 0;
-    padding: 10px 5px;
+.btn-area button{
+	margin-bottom: 20px;
+	border: 1px solid #999;
+	position: relative;
+}
+.codes{
+	width: 42%;
+	height: 400px;
+	float: right;
+}
+.sm-show{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(20%,65%);
+}
+
+@media only screen and (max-width: 767px) {
+	#headContainer {
+		margin-left: 2%;
+	}
+	#bodyContainer{
+		/*background: #101010;*/
+		padding: 0;
+		margin: 2%;
+	}
+	.chars,
+	.codes{
+		width: 100%;
+		height: 200px;
+	}
+	#textArea,
+	#xmorseArea {
+		height: 170px;
+	}
+	.btn-area{
+		width: 100%;
+		height: 50px;
+		padding: 8px;
+	}
+	.btn-area button{
+		padding-left: 20px;
+	}
+	.sm-hidden{
+		display: none;
+	}
+	.sm-show{
+		display: block;
+	}
+
 }

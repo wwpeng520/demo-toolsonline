@@ -1,8 +1,8 @@
 #headContainer{
-    margin-top: 10px;
+    margin-top: 20px;
 }
 #hisDisplay{
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 #hisDisplay table {
   /*height: 400px;*/
@@ -18,4 +18,9 @@
 #hisDisplay th:nth-child(1),#hisDisplay th:nth-child(2),
 #hisDisplay td:nth-child(1),#hisDisplay td:nth-child(2){
   text-align: center;
+}
+@media only screen and (max-width: 767px) {
+	#hisDisplay{
+		margin: 2vw;
+	}
 }

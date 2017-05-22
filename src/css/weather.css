@@ -1,14 +1,16 @@
 #body {
   padding-top: 80px;
-  padding-bottom: 30px;
-  min-width: 950px;
+  padding-bottom: 50px;
+}
+img{
+	width: 8vw;
 }
 .input-group {
   margin-bottom: 5px;
 }
 #weaArea{
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   width: 100%;
   list-style: none;
   text-align: center;
@@ -30,8 +32,10 @@
   background-color: #6C9CE4;
   color: white;
   height: 30px;
+  line-height: 30px;
   text-align: center;
-  padding: 15px auto;
+  border: 1px solid transparent;
+/*  padding: 15px auto;*/
 }
 #livSug{
   display: flex;
@@ -55,7 +59,7 @@
 #livSug li{
   border: 1px solid #BBD1F1;
   width: 25%;
-  height: 180px;
+  height: 195px;
   flex: 1 0 auto;
   position: relative;
   background-color: #EDFDDE;
@@ -64,13 +68,12 @@
   display: block;
   height: 46px;
   width: 46px;
-  background-image: url(http://i.tq121.com.cn/i/weather2015/city/iconalls.png);
+  background-image: url(/img/iconalls.png);
   background-repeat: no-repeat;
   margin: 0 auto;
   position: absolute;
   top: 25px;
   left: 22px;
-  /*border: 1px solid orange;*/
 }
 #livSug li .brf {
   color: #187db6;
@@ -128,4 +131,37 @@
 }
 #livSug li:nth-child(8) i {
   background-position: -108px -172px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	p{
+		font-size: 2vw;
+	}
+	#livSug li{
+	  width: 33.3%;
+	}
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+	p{
+		font-size: 3vw;
+	}
+	#weaArea li{
+	  width: 50%;
+	}
+	#livSug li{
+	  width: 50%;
+	  height: 200px;
+	}
+
+}
+@media only screen and (max-width: 480px) {
+	p{
+		font-size: 3vw;
+	}
+	#weaArea li{
+	  width: 50%;
+	}
+	#livSug li{
+	  width: 100%;
+	  height: 150px;
+	}
 }

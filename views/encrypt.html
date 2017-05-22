@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="/img/Tools.ico">
     <title>常用加密、解密工具</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">-->
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/encrypt.css">
 </head>
@@ -17,7 +17,7 @@
     <%- include('./_header.html'); %>
     <div class="container" id="encryptHeader">
         <div class="page-header">
-            <h6>在线加密解密<small>  采用Crypto-JS实现</small></h6>
+            <h3>在线加密解密<small>  采用Crypto-JS实现</small></h3>
             <ul id="encryptTypes">
                 <li class="clicked">散列/哈希</li>
                 <li>BASE64</li>
@@ -27,7 +27,10 @@
     </div>
     <div class="container" id="encryptContent">
         <div id="enterArea">
-            <p></p><img src="/img/right.png"  class="imgRight"><span>输入要加密的字符串：</span></p>
+        	<svg class="icon" aria-hidden="true">
+			  	<use xlink:href="#icon-iconfontyoujiantou"></use>
+			</svg>
+			<span>输入要加密的字符串：</span></p>
             <textarea name="encrypt-enter" id="encryptEnter">this is an example</textarea>
         </div>
 
@@ -94,14 +97,22 @@
         </div>
         <hr>
         <div id="outArea">
-            <p><img src="/img/right.png" class="imgRight">转换结果：</p>
+            <p>
+            	<svg class="icon" aria-hidden="true">
+				  	<use xlink:href="#icon-iconfontyoujiantou"></use>
+				</svg>
+            	转换结果：
+            </p>
             <textarea name="encrypt-out" id="encryptOut"></textarea>
         </div>
 
     </div>
     <%- include('./_footer.html'); %>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>-->
+<script src="/js/iconfont.js"></script>
+<script src="/js/base.js"></script>
 <script src="/js/encrypt.js"></script>
 <script src="/js/cryptojs/rollups/md5.js"></script>
 <script src="/js/cryptojs/rollups/sha1.js"></script>

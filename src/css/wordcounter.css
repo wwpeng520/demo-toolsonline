@@ -32,14 +32,25 @@
 }
 .instruction{
     background-color: #eee;
-    padding: 10px 20px;
+    padding: 8px 10px;
     border: 1px solid #ccc;
 }
-.instruction h6{
-    font-size: 18px;
-}
-.instruction p{
-    font-size: 14px;
-    line-height: .8em;
-}
 
+.instruction p{
+    font-size: 15px;
+    line-height: 1.5em;
+}
+@media only screen and (max-width: 767px) {
+	#headContainer{
+		margin-left: 2%;
+	}
+	#headContainer h3{
+		font-size: 16px;
+	}
+	#wordsTxtAra{
+		font-size: 13px;
+	}
+	.instruction p{
+		font-size: 12px;
+	}
+}

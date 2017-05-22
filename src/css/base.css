@@ -1,17 +1,115 @@
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
 *{padding:0;margin:0;}
+html{
+	height: 100%;
+}
 body {
     position: relative;
     background-color: #F8F8F8;
+    min-height: 100%;
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
 }
-
+nav{
+	height: 50px;
+	/*overflow: hidden;*/
+}
+.navbar-header{
+	display: flex;
+	flex-direction: row;
+	/*justify-content: space-between;*/ 
+}
+.navbar-header h2{
+	line-height: 50px;
+	margin: 0;
+	/*margin: 0 0 0 20px;*/
+	color: #555;
+}
+.navbar-header .navbar-text{
+	/*background: #00619A;*/
+	line-height: 60px;
+	margin: 0 0 0 20px;
+}
+.navbar-header button{
+	position: absolute;
+	top: -5px;
+	right: 2%;
+	font-size: 30px;
+	padding: 0 5px;
+	/*height: 50px;*/
+}
+ul.nav {
+	margin-top: 0;
+}
+ul.nav li{
+    line-height:38px;
+    font-size: 20px;
+    background: #F8F8F8;
+    margin: 0;
+	cursor: pointer;
+	border-bottom: 1px solid #E7E7E7;
+}
+ul.nav li>div{
+	height: 50px;
+	line-height: 50px;
+	color: #777777;
+	margin-right: 10px;
+}
+ul.nav li ul {
+    display:none;
+    position:absolute;
+    z-index:10000;
+    /*background: rgba(52,73,94, 0.6)*/
+    width: 100%;
+}
+ul.nav li ul li {
+    display:block;
+    float:none;
+    margin-right:0;
+    height:28px;
+    position:relative;
+    line-height:28px;
+    font-size:12px;
+}
+ul.nav li ul li a{
+    color: #777777;
+    font-weight: 500;
+    display: block;
+    background-color: rgba(231,231,231,0.5);
+    padding-left: 15px;
+}
+ul.nav li:hover{
+    background: #E7E7E7;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+ul.nav li ul li a:hover{
+    color: black;
+}
 footer{
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding-top: 10px;
     text-align: center;
-    background-color: #34495E;
-    color: #ddd;
+    background-color: #F0F0F0;
+    border-top: 1px solid #ccc;
+}
+@media only screen and (max-width: 767px) {
+	.navbar-header h2{
+		font-size: 22px;
+		margin: 0 0 0 20px;
+	}
+	ul.nav{
+		height: 340px;
+	}
+	ul.nav li{
+	    line-height:30px;
+	    font-size: 16px;
+	}
 }

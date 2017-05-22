@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="/img/Tools.ico">
     <title>中文分词和词频统计</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/cutwords.css">
 </head>
@@ -21,21 +20,21 @@
                 <textarea type="text" name="text" id="textIn">在此输入文字...</textarea>
             </div>
             <div id="bigBangArea"></div>
+            <div class="btn-area">
+		          	<button type="button" class="btn btn-inverse" value="submit" id="bigBang">中文分词</button>
+		            <button type="button" class="btn btn-inverse" value="clear" id="clearSelected">清除选中</button>
+		            <button type="button" class="btn btn-inverse" value="highFreq" id="highFreqWords">高频词汇</button>
+		            <button type="button" class="btn btn-inverse" value="return" id="returnTo">返回</button>
+		            <a href="cutwords/history" id="history">查询记录>></a>
+		         </div>
         </div> 
         <div id="txtSecletedDisplay">
-            <h6>&nbsp;&nbsp;显示选中文字</h6>
+            <h6>显示选中文字</h6>
             <textarea id="txtInsert"></textarea>
         </div>
-        <div>
-          <button type="button" class="btn btn-inverse" value="submit" id="bigBang">中文分词</button>
-            <button type="button" class="btn btn-inverse" value="clear" id="clearSelected">清除选中</button>
-            <button type="button" class="btn btn-inverse" value="highFreq" id="highFreqWords">高频词汇</button>
-            <button type="button" class="btn btn-inverse" value="return" id="returnTo">返回</button>
-            <a href="cutwords/history" id="history">查询记录>></a>
-         </div>
         
         <div id="introduce">
-            <h6>中文分词和词频统计</h6>
+            <h4>中文分词和词频统计</h4>
             <p>1、分词工具参考锤子的Big Bang。</p>
             <p>2、点击“中文分词”输入框中的文字将会被拆分显示，点击鼠标可选中你需要的文字块，在右框中可以复制你选中的所有文本。</p>
             <p>3、点击“清除选中”，你可以重新选择需要的文本。</p>
@@ -46,7 +45,9 @@
 
     <%- include('./_footer.html'); %>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/iconfont.js"></script>
+<script src="/js/base.js"></script>
 <script src="/js/cutwords.js"></script>
 </body>
 </html>

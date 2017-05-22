@@ -1,24 +1,24 @@
 #hexHeader{
-    margin-top: 20px;
+    margin-top: 30px;
  }
 #hexContent{
-    padding-bottom: 80px;
-}
-.input-focusin{
-    background-color: #7FC2CF;
-    color:white;
+    padding-bottom: 30px;
 }
 #selectType{
     line-height: 40px;
+
 }
-#selectType h4{
-    border: 1px solid #eee;
-    background-color: #F9F9F9;
-    padding: 10px;
+#selectType div.radio{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0;
+	/*width: 67px;*/
 }
-#selectType span{
-     margin-right: 30px;
- }
+#selectType div.radio input{
+	margin-top: 8px;
+	margin-left: -15px;
+}
 .inputAddOn {
     display: flex;
 }
@@ -28,20 +28,38 @@
 th:first-child,
 td:first-child{
     text-align: center;
-    width: 20%;
 }
 #numConver .btn{
-    padding: 10px;
+    padding: 0;
+    height: 30px;
+    width: 40px;
+    position: relative;
 }
-input{
+#numConver .copied-info{
+	display: none;
+	background: #1A1A1A;
+	border: 1px solid #666;
+	border-radius: 5px;
+	font-size: 12px;
+	padding: 2px 5px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(0,-120%);
+}
+#numConver input{
     border-radius: 6px;
     border: 1px solid #ccc;
+    height: 30px;
 }
-.click-animate{  /*点击copy按钮动画效果*/
-    background-color: #7FC2CF;
-    color: white;
-    display: none;
-    font-size: 13px;
-    padding: 5px 10px;
-    border-radius: 8px;
+@media only screen and (max-width: 767px) {
+	#hexHeader{
+		margin-left: 2%;
+	}
+	#hexHeader h3{
+	    font-size: 16px;
+	}
+	.sm-hidden{
+		display: none;
+	}
 }
