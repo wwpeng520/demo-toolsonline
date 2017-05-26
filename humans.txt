@@ -1,0 +1,14 @@
+                            
+/* TEAM */
+author:wwpeng520(汪文鹏)
+email：wwpeng520[at]gmail.com
+GitHub: github.com/wwpeng520
+City:Shenzhen,China
+							
+/* THANKS */
+Fantasy fantasy614[at]gmail.com
+                            
+/* SITE */
+last updated: 05/22/2017 
+标准： HTML5, CSS3,..
+组件： jQuery, JavaScript, Bootstrap, Node.js, Exprress, MySQL, etc.
