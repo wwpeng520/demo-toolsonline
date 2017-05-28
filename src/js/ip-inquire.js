@@ -18,7 +18,7 @@ $(function(){
     });
     //获取客户端IP并显示在表格内
     $.ajax({
-        url: '/userinfo/get',
+        url: '/userinfo/getClientInfo',
         type: 'get',
         dataType: 'json',
         success: function(data){

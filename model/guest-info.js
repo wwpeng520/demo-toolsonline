@@ -1,5 +1,5 @@
-let Sequelize = require('sequelize');
-let sequelize = require('./db');
+const Sequelize = require('sequelize');
+const sequelize = require('./db');
 
 // 创建 model
 let Guest = sequelize.define('guest', {
@@ -12,7 +12,6 @@ let Guest = sequelize.define('guest', {
     ip: {
         type: Sequelize.STRING,
         allowNull:false
-        
     },
     wordsInput: {
         type: Sequelize.STRING
@@ -24,8 +23,8 @@ let Guest = sequelize.define('guest', {
 // 创建表
 let guest = Guest.sync({ force: false });
 
-// 添加新用户
-exports.addGuest = (ip, wordsInput) => {
+// 添加新访客客户端信息
+exports.addClientInfo = (ip, wordsInput) => {
     return Guest.create({
         ip: ip,
         wordsInput: wordsInput
@@ -34,6 +33,11 @@ exports.addGuest = (ip, wordsInput) => {
     }).catch(err => {
         console.log(err);
     });
+};
+
+// 添加新访客ip和访问项目
+exports.addGuest = (ip, item) => {
+    
 };
 
 //显示所有访问记录
@@ -45,11 +49,3 @@ exports.getHistory = ()=>{
 exports.findByIp = ip => {
     return Guest.findAll({ where: { ip: ip } });
 };
-
-// exports.findByIp = ip => {
-//     return Guest.findAll({ where: { ip: ip } }).then(function(result){
-//         for (var i = 0; i < result.length; i++){
-//             console.log(result[i].wordsInput);
-//         }
-//     });
-// };

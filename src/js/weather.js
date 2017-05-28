@@ -1,7 +1,7 @@
 $(function(){
     let city;
     //查询当前城市天气
-    $.get('/userinfo/get', {async: false}, function(data){  //当前城市查询提取
+    $.get('/userinfo/getClientInfo', {async: false}, function(data){  //当前城市查询提取
         let addrArr = data[3].split(" ");
         $("#currentCity").text(data[3]);
         if(addrArr[2]){

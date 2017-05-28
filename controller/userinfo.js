@@ -3,12 +3,9 @@ const router = express.Router();
 const useragent = require('useragent');
 const ipcity = require('node-ipcity');
 const requestIp = require('request-ip');
+const bodyParser = require('body-parser');
 
-// router.all('/', function(req, res, next) {
-//   res.render('userinfo');
-// });
-
-router.get('/get',function(req, res, next) {
+router.get('/getClientInfo',function(req, res, next) {
   let agent = useragent.parse(req.headers['user-agent']);
   let userip = requestIp.getClientIp(req); 
   if(userip.indexOf("::ffff:") === 0){
@@ -24,7 +21,11 @@ router.get('/get',function(req, res, next) {
     console.log(result);
     return res.json(result);
 	});
+});
 
+router.post('/getGuest',function(req, res, next) {
+
+  guest.addGuest(ip, item);//把用户的ip及访问功能类型存储进数据库
 });
 
 module.exports = router;

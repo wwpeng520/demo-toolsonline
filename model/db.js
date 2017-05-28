@@ -1,4 +1,4 @@
-let Sequelize = require('sequelize');
+const Sequelize = require('sequelize');
 
 module.exports = new Sequelize('tools', 'root', '123456', {
     host: 'localhost',

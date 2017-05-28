@@ -8,7 +8,7 @@ $(function () {
     
     //useragent查询
     $.ajax({
-        url: '/userinfo/get',
+        url: '/userinfo/getclient',
         type: 'get',
         dataType: 'json',
         success: function(data){
