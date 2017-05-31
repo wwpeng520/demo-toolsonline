@@ -16,6 +16,9 @@ const app = express();
 app.set('views', path.join(__dirname, 'view'));
 app.set('view engine', 'html');
 app.engine('.html' , ejs.__express); 
+//或者用如下形式，但是‘html’后缀应改为‘ejs’
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -26,7 +29,7 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public'))); //设置静态文件路径，__dirname代表当前文件app.js所在的目录
 app.use(express.static(path.join(__dirname, 'dist'))); 
 
-app.use(base);
+app.use(base);//基本路由
 app.use('/cutwords', cutwords);
 app.use('/userinfo', userinfo);
 

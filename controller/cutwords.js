@@ -67,7 +67,7 @@ router.get('/history', function(req, res, next) {
             td3 = '<td>' + results[i].wordsInput + '</td>';
             tr = '<tr>' + td1 + td2 + td3 + '</tr>';
             table += tr;
-            console.log(tr);
+            // console.log(tr);
         }
         table = '<table>' + table + '</table>'
         res.render('cwhistory',{tab:table});

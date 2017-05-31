@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <% include ./part/_head.html %>
+    <title>商品展示</title>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+    <%- include('./part/_header.html'); %>
+    <div class="container" id="page_container">
+        <div class="pro-index">
+            <div class="pro-img">
+                <img src="/img/yidongyingpan.jpg" alt="移动硬盘">
+            </div>
+            <div class="pro-choose">
+                <h3>东芝（TOSHIBA）移动硬盘</h3>
+                <div class="tip">时尚炫彩告别单调，更加小巧轻薄！高速3.0传输防震设计，更高效稳定！兼容win7、win8、苹果系统，更方便使用！细节见证实力，百年品牌值得信赖！</div>
+                <div class="price-info">
+                    <p>京东价<span class="price-now">￥390.00</span></p>
+                    <p>促&nbsp;&nbsp;&nbsp;&nbsp;销<span>满300立减30元</span></p>
+                </div>
+                <div class="pro-items">
+                    <div class="pro-items-txt">选择型号</div>
+                    <ul class="pro-choose-item">
+                        <li class="pro-choose-item">基础款新黑甲虫A2系列（黑色）</li>
+                        <li class="pro-choose-item">基础款Ready B2系列（白色）</li>
+                        <li class="pro-choose-item">多彩升级版V8系列（神秘蓝）</li>
+                    </ul>
+                </div>
+                <div class="go-buy">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">-</button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="1">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">+</button>
+                        </span>
+                    </div>
+                    <div class="go-buy-btn">加入购物车</div>
+                </div>
+            </div>
+        </div>
+
+        <!--商品展示区-->
+        <div class="pro-introduce">
+            <!--侧边栏-->
+            <div class="aside">
+                <div class="store-nail">
+                    <h3>东芝存储官方旗舰店</h3>
+                    <div class="store-index">
+                        <div class="store-index-li">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-fangzi"></use>
+                            </svg>&nbsp;进店逛逛
+                        </div>
+                        <div class="store-index-li">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shoucang-shoucang"></use>
+                            </svg>&nbsp;关注店铺
+                        </div>
+                    </div>
+                </div>
+                <div class="talent">
+                    <h3>达人选购</h3>
+                    <div class="talent-item">
+                        <div><img src="/img/darenxuangou01.jpg"></div>
+                        <p>iRecadata/安盘M30 USB3.0便携式移动固态硬盘128G/256G/512G 钯银 128G</p>
+                        <div class="price">￥439.00</div>
+                    </div>
+                    <div class="talent-item">
+                        <div><img src="/img/darenxuangou02.jpg"></div>
+                        <p>西部数据（WD） Elements 新元素系列 2.5英寸 USB3.0 移动硬盘 </p>
+                        <div class="price">￥439.00</div>
+                    </div>
+                    <div class="talent-item">
+                        <div><img src="/img/darenxuangou03.jpg"></div>
+                        <p>东芝TOSHIBA 移动硬盘500G/1t/2t/3t USB3.0高速2.5英寸</p>
+                        <div class="price">￥439.00</div>
+                    </div>
+                </div>
+            </div>
+            <!--商品详情-->
+            <div class="info-box">
+                <ul class="info-box-list" id="info_list">
+                    <li class="current">商品介绍</li>
+                    <li>规格与包装</li>
+                    <li>售后保障</li>
+                    <li>商品评价</li>
+                    <li>社区互动</li>
+                </ul>
+                <div class="info-box-display" id="info_display">
+                    <div class="block">
+                        <div class="details">
+                            <div class="details-top">
+                                <h3>品牌：<a href="#">东芝（TOSHIBA）</a>
+                                    <span>
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-aixin"></use>
+                                        </svg>
+                                    </span>
+                                </h3>
+                                <ul>
+                                    <li class="col-md-3" title="东芝V8">商品名称：东芝V8</li>
+                                    <li class="col-md-3" title="1356598">商品编号：1356598</li>
+                                    <li class="col-md-3" title="270.00g">商品毛重：270.00g</li>
+                                    <li class="col-md-3" title="中国大陆">商品产地：中国大陆</li>
+                                    <li class="col-md-3" title="2.5英寸">尺寸：2.5英寸</li>
+                                    <li class="col-md-3" title="USB 3.0">接口：USB 3.0</li>
+                                    <li class="col-md-3" title="1TB">容量：1TB</li>
+                                    <li class="col-md-3" title="便携式存储">类型：便携式存储</li>
+                                </ul>
+                            </div>
+                            <div class="detail-img">
+                                <img src="/img/details01.jpg">
+                                <img src="/img/details02.jpg">
+                                <img src="/img/details03.jpg">
+                                <img src="/img/details04.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hide">规格与包装</div>
+                    <div class="hide">售后保障</div>
+                    <div class="hide">商品评价</div>
+                    <div class="hide">社区互动</div>
+                </div>
+            </div>
+        </div>
+        <!--商品展示区结束-->
+        
+    </div>
+
+    <%- include('./part/_footer.html'); %>
+<% include ./part/_script.html %>
+<script src="/js/product.js"></script>
+</body>
+</html>

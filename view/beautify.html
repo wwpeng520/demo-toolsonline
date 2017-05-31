@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
-    <meta name="keywords" content="tools,front-end">
-    <meta name="description" content="我的个人练习项目，在线工具">
-    <meta name="author" content="汪文鹏,wwpeng520@gmail.com">
-    <link rel="shortcut icon" href="/img/Tools.ico">
+    <% include ./part/_head.html %>
     <title>HTML/CSS/JS格式化</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/mybeautify.css">
 </head>
 <body>
-    <%- include('./_header.html'); %>
+    <%- include('./part/_header.html'); %>
     <div class="container" id="headContainer">
         <div class="page-header">
             <h3>HTML/CSS/JS格式化</h3>
@@ -50,13 +42,9 @@
         </div>
     </div>
 
-    <%- include('./_footer.html'); %>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>-->
+    <%- include('./part/_footer.html'); %>
+<% include ./part/_script.html %>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="/js/iconfont.js"></script>
-<script src="/js/base.js"></script>
 <script src="/js/mybeautify.js"></script>
 </body>
 </html>

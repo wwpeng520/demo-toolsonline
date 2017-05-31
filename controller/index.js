@@ -33,6 +33,10 @@ router.get('/ip-inquire', function(req, res, next) {
   res.render('ip-inquire');
 });
 
+router.get('/product', function(req, res, next) {
+  res.render('product');
+});
+
 router.get('/weather', function(req, res, next) {
   res.render('weather');
 });

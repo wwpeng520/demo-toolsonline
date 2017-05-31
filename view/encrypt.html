@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
-    <meta name="keywords" content="tools,front-end">
-    <meta name="description" content="我的个人练习项目，在线工具">
-    <meta name="author" content="汪文鹏,wwpeng520@gmail.com">
-    <link rel="shortcut icon" href="/img/Tools.ico">
+    <% include ./part/_head.html %>
     <title>常用加密、解密工具</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">-->
-    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/encrypt.css">
 </head>
 <body>
-    <%- include('./_header.html'); %>
+    <%- include('./part/_header.html'); %>
     <div class="container" id="encryptHeader">
         <div class="page-header">
             <h3>在线加密解密<small>  采用Crypto-JS实现</small></h3>
@@ -108,32 +99,9 @@
         </div>
 
     </div>
-    <%- include('./_footer.html'); %>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>-->
-<script src="/js/iconfont.js"></script>
-<script src="/js/base.js"></script>
+    <%- include('./part/_footer.html'); %>
+<% include ./part/_script.html %>
+<% include ./part/_cryptojs.html %>
 <script src="/js/encrypt.js"></script>
-<script src="/js/cryptojs/rollups/md5.js"></script>
-<script src="/js/cryptojs/rollups/sha1.js"></script>
-<script src="/js/cryptojs/rollups/sha3.js"></script>
-<script src="/js/cryptojs/rollups/sha224.js"></script>
-<script src="/js/cryptojs/rollups/sha256.js"></script>
-<script src="/js/cryptojs/rollups/sha384.js"></script>
-<script src="/js/cryptojs/rollups/sha512.js"></script>
-<script src="/js/cryptojs/rollups/hmac-sha1.js"></script>
-<script src="/js/cryptojs/rollups/hmac-sha3.js"></script>
-<script src="/js/cryptojs/rollups/hmac-sha224.js"></script>
-<script src="/js/cryptojs/rollups/hmac-sha256.js"></script>
-<script src="/js/cryptojs/rollups/hmac-sha384.js"></script>
-<script src="/js/cryptojs/rollups/hmac-sha512.js"></script>
-<script src="/js/cryptojs/rollups/pbkdf2.js"></script>
-<script src="/js/cryptojs/rollups/ripemd160.js"></script>
-<script src="/js/cryptojs/rollups/hmac-ripemd160.js"></script>
-<script src="/js/cryptojs/rollups/aes.js"></script>
-<script src="/js/cryptojs/rollups/tripledes.js"></script>
-<script src="/js/cryptojs/rollups/rc4.js"></script>
-<script src="/js/cryptojs/rollups/rabbit.js"></script>
 </body>
 </html>
