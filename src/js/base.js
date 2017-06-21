@@ -1,10 +1,9 @@
 $(function(){
 
     $("ul.nav > li").hover(function(){
-        $(this).addClass("on");
+        $(this).find('ul').stop().slideDown(800).parent().addClass('on');
     },function(){
-        $(this).removeClass("on");
+        $(this).find('ul').stop().slideUp(500).parent().removeClass('on');
     });
-
 
 });
