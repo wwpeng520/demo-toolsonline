@@ -38,7 +38,7 @@ router.get('/', function(req, res, next) {
   res.render('cutwords');
 });
 
-//访问分词用户记录页面
+//访问分词用户记录页面(通过cutwords.html页面“查询记录”链接跳转至cutwords/history路径)
 router.get('/history', function(req, res, next) {
     guest.getHistory().then((value) => {
         let results = [];
@@ -58,7 +58,7 @@ router.get('/history', function(req, res, next) {
             obj.wordsInput = value[i].wordsInput;
             results.push(obj);
         }
-        // console.log(results);
+        console.log(results);
         let table, tr, td1, td2, td3;
         table = '<tr><th>访问者IP</th><th>访问时间</th><th>输入内容</th></tr>'
         for (let i = results.length-1; i >= 0; i--){
