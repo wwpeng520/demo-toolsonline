@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
+    "pm2": "pm2 start ./bin/www",
     "build": "webpack"
   },
   "dependencies": {
@@ -40,6 +41,7 @@
     "json-loader": "^0.5.4",
     "less": "^2.7.2",
     "node-sass": "^4.5.2",
+    "nodemon": "^1.17.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
     "uglify-js": "^2.8.22",
